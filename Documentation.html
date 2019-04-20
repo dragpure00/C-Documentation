@@ -1,0 +1,500 @@
+<nav id="navbar">
+  <header>C++</header>
+  <ul> 
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#What_you_should_already_know" rel="internal"><li>What you should already know</li></a>
+     <a class="nav-link" href="#C_vs_C++" rel="internal"><li>C vs C++</li></a>
+    <a class="nav-link" href="#C#_vs_C++" rel="internal"><li>C# vs C++</li></a>
+    <a class="nav-link" href="#Hello_world" rel="internal"><li>Hello world</li></a>
+    <a class="nav-link" href="#Fundamental_Types" rel="internal"><li>Fundamental Types</li></a>
+    <a class="nav-link" href="#Variable" rel="internal"><li>Variable</li></a>
+    <a class="nav-link" href="#Function" rel="internal"><li>Function </li></a>
+    <a class="nav-link" href="#Class" rel="internal"><li>Class</li></a>
+    <a class="nav-link" href="#Operators" rel="internal"><li>Operators</li></a>
+    <a class="nav-link" href="#Loops" rel="internal"><li>Loops</li></a>
+    <a class="nav-link" href="#Statement" rel="internal"><li>Statement</li></a>
+    <a class="nav-link" href="#Arrays" rel="internal"><li>Arrays</li></a>
+     <a class="nav-link" href="#Strings" rel="internal"><li>Strings</li></a>
+    <a class="nav-link" href="#Pointers" rel="internal"><li>Pointers</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>  
+      <p>C++ is not a purely object-oriented language but a hybrid that contains the functionality
+of the C programming language. This means that you have all the features that are available in C:<ul><li>
+ universally usable modular programs</li>
+      <li>efficient, close to the machine programming</li>
+      <li>portable programs for various platforms.</li></ul>
+The large quantities of existing C source code can also be used in C++ programs.
+C++ supports the concepts of object-oriented programming (or OOP for short),
+which are:<ul><li>
+      data abstraction, that is, the creation of classes to describe objects</li>
+      <li>data encapsulation for controlled access to object data</li>
+      <li>inheritance by creating derived classes (including multiple derived classes)</li>
+<li>polymorphism (Greek for multiform), that is, the implementation of instructions
+  that can have varying effects during program execution.</li></ul>
+Various language elements were added to C++, such as references, templates, and exception handling. Even though these elements of the language are not strictly object-oriented programming features, they are important for efficient program implementation.</p>
+
+
+      </artice>
+    </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This book was written for readers interested in learning the C++ programming
+language from scratch, and for both novice and advanced C++ programmers
+wishing to enhance their knowledge of C++. It was our goal from the beginning to design this text with the capabilities of serving dual markets, as a textbook for students and as a holistic reference manual for professionals.</p>
+
+      </article>
+    </section>
+<section class="main-section" id="C_vs_C++">
+    <header>C vs C++</header>
+    <article>
+      <p>
+        C proved very useful in running applications coded in assembly language because of its strengths like a simple compiler, lower access levels of memory, lower run time support and an efficient constructing language that was in sync with the hardware instructions. Another of its credits is that it is a highly portable (compatible with a variety of OS & Platforms) with very minimal source code changes required. Thus it has enabled remote operations & independence from the hardware. C is also compliant to a variety of standards, making it work with everything.
+
+C++ is known as a mid-level language. Due to the fact that the C++ comprises of both high-level and low-level language features. Some of the adjectives used to describe C++ are static typed, free-form, multi-paradigm and supporting procedural programming.</p>
+  </article>
+</section>
+  <section class="main-section" id="C#_vs_C++">
+    <header>C# vs C++</header>
+    <article>
+    <p>At a very basic level, both C# and C++ have similar code. C# is much newer to the game, however. It was introduced by Microsoft as a Java competitor in 2000. C++ has been a foundation language for many other languages, and it was introduced way back in the 1980s. Consequently, C++ has a much more prominent appearance in applications.
+
+Both C++ and C# are object-oriented languages, although C++ is considered a harder language to work with. Both of them can be used in web and desktop applications, but C# is much more popular now for both applications. C++ is considered a more prestigious language used for applications such as games, operating systems, and very low-level programming that requires better control of hardware on the PC or server.
+
+If your application is a simple web or desktop application, most developers will urge you to work with C# if it’s their language of choice. If you want an application that works directly with computer hardware or deals with application development that C# is not efficient with, your developer will likely urge you to go with C++.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article> 
+As with learning the basics of any programming language, The Hello World programming is the best example of the basics of C++
+<code>#include &ltiostream&gt
+using namespace std;
+
+int main() 
+{
+    cout &lt&lt "Hello, World!";
+    return 0;
+}
+</code>
+
+      By applying this code on Visual Studio, your output should be:<code>Hello, World!</code>
+    </article>
+    </section>
+  <section class="main-section" id="Fundamental_Types">
+    <header>Fundamental Types</header>
+    <p>
+A program can use several data to solve a given problem, for example, characters, integers, or floating-point numbers. Since a computer uses different methods for processing
+and saving data, the data type must be known. The type defines
+<ol><li> the internal representation of the data,</li> 
+
+  <li> and the amount of memory to allocate.</ol></li>
+A number such as -1000 can be stored in either 2 or 4 bytes. When accessing the
+part of memory in which the number is stored, it is important to read the correct number
+of bytes. Moreover, the memory content, that is the bit sequence being read, must be
+interpreted correctly as a signed integer.
+The C++ compiler recognizes the fundamental types, also referred to as built-in types,
+shown on the opposite page, on which all other types (vectors, pointers, classes, ...) are
+based.
+    </p>
+<h1>Boolean</h1>
+    <p>
+The result of a comparison or a logical association using AND or OR is a boolean value, which can be true or false. C++ uses the bool type to represent boolean values. An
+expression of the type bool can either be true or false, where the internal value for
+true will be represented as the numerical value 1 and false by a zero.
+    </p>
+<h1>Char and wchar_t</h1>
+    <p>
+  These types are used for saving character codes. A character code is an integer associated with each character. The letter A is represented by code 65, for example. The character set defines which code represents a certain character. When displaying characters on
+screen, the applicable character codes are transmitted and the “receiver,” that is the
+screen, is responsible for correctly interpreting the codes.
+
+      The C++ language does not stipulate any particular characters set, although in general a character set that contains the ASCII code (American Standard Code for Information Interchange) is used. This 7-bit code contains definitions for 32 control characters (codes 0 – 31) and 96 printable characters (codes 32 – 127).
+
+      The char (character) type is used to store character codes in one byte (8 bits). This amount of storage is sufficient for extended character sets, for example, the ANSI character set that contains the ASCII codes and additional characters such as German
+umlauts.
+
+      The wchar_t (wide character type) type comprises at least 2 bytes (16 bits) and is
+thus capable of storing modern Unicode characters. Unicode is a 16-bit code also used in
+
+      Windows NT and containing codes for approximately 35,000 characters in 24 languages.
+    </p>
+<h1>Integral types</h1>
+  <p>
+    The types short, int, and long are available for operations with integers. These types are distinguished by their ranges of values. The table on the opposite page shows the integer types, which are also referred to as integral types, with their typical storage
+requirements and ranges of values. The int (integer) type is tailor-made for computers and adapts to the length of a register on the computer. For 16-bit computers, int is thus equivalent to short, whereas for 32-bit computers int will be equivalent to long.
+C++ treats character codes just like normal integers. This means you can perform calculations with variables belonging to the char or wchar_t types in exactly the same
+way as with int type variables. char is an integral type with a size of one byte. The
+range of values is thus –128 to +127 or from 0 to 255, depending on whether the compiler interprets the char type as signed or unsigned. This can vary in C++. The wchar_t type is a further integral type and is normally defined as unsigned
+short.
+    <br>
+    The short, int, and long types are normally interpreted as signed with the highest bit representing the sign. However, integral types can be preceded by the keyword
+unsigned. The amount of memory required remains unaltered but the range of values
+changes due to the highest bit no longer being required as a sign. The keyword
+unsigned can be used as an abbreviation for unsigned int. The char type is also normally interpreted as signed. Since this is merely a convention and not mandatory, the signed keyword is available. Thus three types are available: char, signed char, and unsigned char.</p>
+<h1>Floating Point</h1>
+<p>Numbers with a fraction part are indicated by a decimal point in C++ and are referred to
+as floating-point numbers. In contrast to integers, floating-point numbers must be stored
+to a preset accuracy. The following three types are available for calculations involving
+floating-point numbers:
+float for simple accuracy
+double for double accuracy
+long double for high accuracy
+The value range and accuracy of a type are derived from the amount of memory allocated
+and the internal representation of the type.
+Accuracy is expressed in decimal places. This means that “six decimal places” allows a
+programmer to store two floating-point numbers that differ within the first six decimal
+places as separate numbers. In reverse, there is no guarantee that the figures 12.3456 and
+12.34561 will be distinguished when working to a accuracy of six decimal places. And
+remember, it is not a question of the position of the decimal point, but merely of the
+numerical sequence.
+If it is important for your program to display floating-point numbers with an accuracy
+supported by a particular machine, you should refer to the values defined in the cfloat
+header file.
+Readers interested in additional material on this subject should refer to the Appendix,
+which contains a section on the representation of binary numbers on computers for both integers and floating-point numbers.</p>
+    </section>
+  <section class="main-section" id="Variable">
+    <header>Variable</header>
+    <article>
+      <p>
+     Within a program names are used to designate variables and functions. The following
+rules apply when creating names, which are also known as identifiers:<ul><li>a name contains a series of letters, numbers, or underscore characters ( _ ). German umlauts and accented letters are invalid. C++ is case sensitive; that is,
+      upper- and lowercase letters are different.</li>
+      <li>the first character must be a letter or underscore</li>
+<li>there are no restrictions on the length of a name and all the characters in the
+      name are significant</li>
+      <li>C++ keywords are reserved and cannot be used as names.</li></ul>
+      </p>
+      <p>
+       Data such as numbers, characters, or even complete records are stored in variables to
+enable their processing by a program. Variables are also referred to as objects, particularly
+if they belong to a class.
+      </p>
+      <p>
+       A variable must be defined before you can use it in a program. When you define a variable the type is specified and an appropriate amount of memory reserved. This memory
+space is addressed by reference to the name of the variable. A simple definition has the
+following syntax: typ, name1, [name2 ... ];   
+      </p>
+    <p>This defines the names of the variables in the list name1 [, name2 ...] as variables
+of the type type. The parentheses [ ... ] in the syntax description indicate that this
+part is optional and can be omitted. Thus, one or more variables can be stated within a
+single definition. A variable defined outside of each function is global, i.e. it can be used by all functions. A variable defined within a function is local, i.e. it can be used only in that function.</p>
+    <h1>Initialization</h1>
+ A variable can be initialized, i.e. a value can be assigned to the variable, during its definition. Initialization is achieved by placing the following immediately after the name of
+the variable:
+    <ul><li>an equals sign ( = ) and an initial value for the variable or</li>
+    <li>  round brackets containing the value of the variable.</li></ul>
+    For an example:
+    <code>char c = 'a';
+float x(1.875);
+    </code>
+    Any global variables not explicitly initialized default to zero. In contrast, the initial
+    value for any local variables that you fail to initialize will have an undefined initial value.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Function">
+    <header>Function</header>
+    <article>
+     <p> A function is a group of statements that together perform a task. Every C++ program has at least one function, which is main(), and all the most trivial programs can define additional functions.
+
+You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is such that each function performs a specific task.
+
+A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.
+
+The C++ standard library provides numerous built-in functions that your program can call. For example, function strcat() to concatenate two strings, function memcpy() to copy one memory location to another location and many more functions.
+
+A function is known with various names like a method or a sub-routine or a procedure etc.
+      </p>
+      <p> Here are some examples:
+        <code>return_type function_name( parameter list ) {
+   body of the function
+}</code>
+</p>
+
+<p>A C++ function definition consists of a function header and a function body.<ul><li>Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.</li><li>Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.</li>
+      <li>Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no paramet</li>
+      <li>Function Body − The function body contains a collection of statements that define what the function does.</li>
+      </p>
+
+      <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Class">
+    <header>Class</header>
+    <article>
+<p>The main purpose of C++ programming is to add object orientation to the C programming language and classes are the central feature of C++ that supports object-oriented programming and are often called user-defined types.
+
+A class is used to specify the form of an object and it combines data representation and methods for manipulating that data into one neat package. The data and functions within a class are called members of the class.</p>
+
+<p>When you define a class, you define a blueprint for a data type. This doesn't actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.
+
+A class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations.</p>
+      <p>The following example shows the box data type being defined by class<code>class Box {
+   public:
+      double length;   // Length of a box
+      double breadth;  // Breadth of a box
+      double height;   // Height of a box
+        };</code>The keyword public determines the access attributes of the members of the class that follows it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as private or protected which we will discuss in a sub-section.</p><p>A class provides the blueprints for objects, so basically an object is created from a class. We declare objects of a class with exactly the same sort of declaration that we declare variables of basic types. Following statements declare two objects of class Box<code>Box Box1;          // Declare Box1 of type Box
+Box Box2;          // Declare Box2 of type Box</code>
+    </article>
+    </section>
+  <section class="main-section" id="Operators">
+    <header>Operators</header>
+    <article>
+<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C++ is rich in built-in operators and provide the following types of operators<ul><li>Arithmetic Operators</li><li>
+      Relational Operators</li>
+      <li>Logical Operators</li>
+      <li>Bitwise Operators</li>
+      <li>Assignment Operators</li>
+      <li>Misc Operators</li><ul> </p>
+      <h1>Arithmetic Operators</h1>
+      <p> This operator provides operators for five basic arithmetic calculations: addition, subtraction, multiplication, division, and taking the modulus.Each of these operators uses two values (called operands) to calculate a final answer. Together, the operator and its operands constitute an expression. Lets take a look at the following statement. <code>int apple = 6+2;</code>The values 6 and 2 are operands, the + symbol is the addition operator, and 6 + 2 is an expression whose value is 8.</p><p>
+Here are C++'s five basic arithmetic operators:
+
+<ul><li>The + operator adds its operands. For example, 4 + 20 evaluates to 24.</li>
+
+<li>The - operator subtracts the second operand from the first. For example, 12 - 3 evaluates to 9.</li>
+
+  <li>The * operator multiplies its operands. For example, 28 * 4 evaluates to 112.</li>
+
+<li>The / operator divides its first operand by the second. For example, 1000 / 5 evaluates to 200. If both operands are integers, the result is the integer portion of the quotient. For example, 17 / 3 is 5, with the fractional part discarded.</li>
+
+<li>The % operator finds the modulus of its first operand with respect to the second. That is, it produces the remainder of dividing the first by the second. For example, 19 % 6 is 1 because 6 goes into 19 three times, with a remainder of 1. Both operands must be integer types; using the % operator with floating-point values causes a compile-time error. If one of the operands is negative, the sign of the result depends on the implementation.</li></ul>
+</p>
+
+      <h1>Relational Operator</h1>
+<p>In C++ Programming, the values stored in two variables can be compared using following operators and relation between them can be determined.</p>
+      <p>Various C++ relational operators available are:<ul><li>> ,Greater than</li>
+      <li>>= , Greater than or equal to</li>
+      <li>== , Is equal to</li>
+      <li>!= , Is not equal to</li>
+      <li>&lt , Less than</li>
+      <li> &lt= , Less than or equal to </li></ul></p>
+  <p>                                                        
+<h1>Logical Operators</h1>
+<p>Logical Operators are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration. The result of the operation of a logical operator is a boolean value either true or false.</p>
+<ul><li>Logical AND: The ‘&&’ operator returns true when both the conditions in consideration are satisfied. Otherwise it returns false. For example, a && b returns true when both a and b are true (i.e. non-zero).</li>
+<li>Logical OR: The ‘||’ operator returns true when one (or both) of the conditions in consideration is satisfied. Otherwise it returns false. For example, a || b returns true if one of a or b is true (i.e. non-zero). Of course, it returns true when both a and b are true.</li>
+<li>Logical NOT: The ‘!’ operator returns true the condition in consideration is not satisfied. Otherwise it returns false. For example, !a returns true if a is false, i.e. when a=0.</li>
+  <h1>Bitwise Operator</h1>
+  <p>Bitwise operator works on bits and perform bit-by-bit operation. It modifies variables considering the bit patterns that represent the values they store The following bitwise operators are:<ul><li>
+  &,AND</li>
+  <li>|	OR</li>
+  <li>^	XOR	</li>
+ <li> ~	NOT</li>
+  <li>&lt&lt	SHL,Shift bits left</li>
+ <li> &gt&gt	SHR,Shift bits right</li></ul>
+
+  
+  </p>
+
+
+    </article>
+    </section>
+  <section class="main-section" id="Loops">
+    <header>Loops</header>
+    <article>
+      <p>A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement in most of the programming languages </p><img src="https://www.tutorialspoint.com/cplusplus/images/loop_architecture.jpg"alt="loop diagram"></img>
+      <p>The following loops are:</p>
+<ul><li>While loop:Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</li>
+
+<li>	for loop
+Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</li>
+
+<li>	do...while loop
+  Like a ‘while’ statement, except that it tests the condition at the end of the loop body.</li>
+
+<li>	nested loops
+  You can use one or more loop inside any another ‘while’, ‘for’ or ‘do..while’ loop.</li></ul>
+ 
+    </article>
+    </section>
+  <section class="main-section" id="Statement">
+    <header>Statement</header>
+    <article>
+<p>Decision making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.Here is a typical statement flow chart.</p><img src="https://www.tutorialspoint.com/cplusplus/images/cpp_decision_making.jpg"alt="statement flowchart"></img><p> The following statements are:<ul><li>	if statement:
+    An ‘if’ statement consists of a boolean expression followed by one or more statements.</li>
+
+<li>if...else statement
+An ‘if’ statement can be followed by an optional ‘else’ statement, which executes when the boolean expression is false.</li>
+
+<li>	switch statement
+  A ‘switch’ statement allows a variable to be tested for equality against a list of values.</li>
+
+<li>	nested if statements
+  You can use one ‘if’ or ‘else if’ statement inside another ‘if’ or ‘else if’ statement(s).</li>
+
+<li>	nested switch statements
+You can use one ‘switch’ statement inside another ‘switch’ statement(s).</li></ul></p>
+
+    </article>
+    </section>
+  <section class="main-section" id="Arrays">
+    <header>Arrays</header>
+    <article>
+C++ provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.
+
+All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.
+
+
+If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+<p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+
+      <p>To declare an array in C++, the programmer specifies the type of the elements and the number of elements required by an array as follows<code>type arrayName [ arraySize ];</code>This is called a single-dimension array. The arraySize must be an integer constant greater than zero and type can be any valid C++ data type. For example, to declare a 10-element array called balance of type double, use this statement<code>double balance[10];</code></p>
+<p>You can initialize C++ array elements either one by one or using a single statement as follows<code>double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</code>If you omit the size of the array, an array just big enough to hold the initialization is created.If you write<code>double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</code>You will create exactly the same array as you did in the previous example.<code>balance[4] = 50.0;</code>The above statement assigns element number 5th in the array a value of 50.0. Array with 4th index will be 5th, i.e., last element because all arrays have 0 as the index of their first element which is also called base index. The image below represents the array explained in the previous example.
+  </p><img src="https://www.tutorialspoint.com/cplusplus/images/array_presentation.jpg"alt="array"></img>
+<p>An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. <code>double salary = balance[9];</code>The above statement will take 10th element from the array and assign the value to salary variable. Following is an example, which will use all the above-mentioned three concepts viz. declaration, assignment and accessing arrays.
+  <code>#include <iostream>
+using namespace std;
+ 
+#include <iomanip>
+using std::setw;
+ 
+int main () {
+
+   int n[ 10 ]; // n is an array of 10 integers
+ 
+   // initialize elements of array n to 0          
+   for ( int i = 0; i &lt 10; i++ ) {
+      n[ i ] = i + 100; // set element at location i to i + 100
+   }
+   cout &lt&lt "Element" &lt&lt setw( 13 ) &lt&lt "Value" &lt&lt endl;
+ 
+   // output each array element's value                      
+   for ( int j = 0; j &lt 10; j++ ) {
+      cout &lt&lt setw( 7 )&lt&lt j &lt&lt setw( 13 ) &lt&lt n[ j ] &lt&lt endl;
+   }
+ 
+   return 0;
+     }</code>
+This program makes use of setw() function to format the output. When the above code is compiled and executed, it produces the following result.
+    <code>Element        Value
+      0          100
+      1          101
+      2          102
+      3          103
+      4          104
+      5          105
+      6          106
+      7          107
+      8          108
+      9          109</code>
+  
+    <h1>Multi-Dimensional Arrays</h1>
+  <p>  The simplest form of the multidimensional array is the two-dimensional array. A two-dimensional array is, in essence, a list of one-dimensional arrays. To declare a two-dimensional integer array of size x,y, you would write something as follows.<code>type arrayName [ x ][ y ];</code>Where type can be any valid C++ data type and arrayName will be a valid C++ identifier.</p>
+    <p>Multidimensioned arrays may be initialized by specifying bracketed values for each row. Following is an array with 3 rows and each row have 4 columns.
+      <code>int a[3][4] = {  
+   {0, 1, 2, 3} ,   /*  initializers for row indexed by 0 */
+   {4, 5, 6, 7} ,   /*  initializers for row indexed by 1 */
+   {8, 9, 10, 11}   /*  initializers for row indexed by 2 */
+        };</code>The nested braces, which indicate the intended row, are optional. The following initialization is equivalent to previous example<code>int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};</code></p>
+    </article>
+    </section>
+   <section class="main-section" id="Strings">
+    <header>Strings</header>
+    <article>
+      <p>he C-style character string originated within the C language and continues to be supported within C++. This string is actually a one-dimensional array of characters which is terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+
+The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."<code>char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};</code>
+        If you follow the rule of array initialization, then you can write the above statement as follows <code>char greeting[] = "Hello";</code></p>
+      <p>Following is the memory presentation of above defined string in C/C++ −
+
+      </p>
+       <img src="https://www.tutorialspoint.com/cplusplus/images/string_representation.jpg" alt="memory presentation of above defined string"></img>
+     <p> You do not place the null character at the end of a string constant. The C++ compiler automatically places the '\0' at the end of the string when it initializes the array. Lets take at the following code that will pring the string in the image above.</p>
+       <code>#include &ltiostream&gt
+
+using namespace std;
+
+int main () {
+
+   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+
+   cout &lt&lt"Greeting message: ";
+   cout &lt&lt greeting &lt&lt endl;
+
+   return 0;
+         }</code><p>When the above code is compiled and executed, it produces the following result</p>
+     <code>Greeting message: Hello</code>
+    </article>
+    </section>
+ <section class="main-section" id="Pointers">
+    <header>Pointers</header>
+    <article>
+      <p>A pointer is a variable whose value is the address of another variable. Like any variable or constant, you must declare a pointer before you can work with it. The general form of a pointer variable declaration is</p>
+      <code>type *var-name;</code>
+      <p>Here, type is the pointer's base type; it must be a valid C++ type and var-name is the name of the pointer variable. The asterisk you used to declare a pointer is the same asterisk that you use for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. Following are the valid pointer declaration.<ul><li>int    *ip;    // pointer to an integer</li>
+      <li>double *dp;    // pointer to a double</li>
+      <li>float  *fp;    // pointer to a float</li>
+      <li>char   *ch     // pointer to character</li></ul>
+</p>
+   <p>The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that represents a memory address. The only difference between pointers of different data types is the data type of the variable or constant that the pointer points to</p>
+   <p>There are few important operations, which we will do with the pointers very frequently. <ol type ="a"><li>We define a pointer variable.</li><li>  Assign the address of a variable to a pointer.</li><li> Finally access the value at the address available in the pointer variable.</li></ol> This is done by using unary operator * that returns the value of the variable located at the address specified by its operand. Following example makes use of these operations.</p><code>#include <iostream>
+
+using namespace std;
+
+int main () {
+   int  var = 20;   // actual variable declaration.
+   int  *ip;        // pointer variable 
+
+   ip = &var;       // store address of var in pointer variable
+
+   cout &lt&lt "Value of var variable: ";
+   cout &lt&lt var &lt&lt endl;
+
+   // print the address stored in ip pointer variable
+   cout &lt&lt "Address stored in ip variable: ";
+   cout &lt&lt ip &lt&lt endl;
+
+   // access the value at the address available in pointer
+   cout &lt&lt "Value of *ip variable: ";
+   cout &lt&lt *ip &lt&lt endl;
+
+   return 0;
+     }</code>
+     <p>When the above code is compiled and executed, it produces result something as follows</p>
+     <code>Value of var variable: 20
+Address stored in ip variable: 0xbfc601ac
+       Value of *ip variable: 20</code>
+     <p>Pointers have many but easy concepts and they are very important to C++ programming. There are following few important pointer concepts which should be clear to a C++ programmer</p>
+     <ul><li>	Null Pointers:
+C++ supports null pointer, which is a constant with a value of zero defined in several standard libraries.</li>
+
+<li>	Pointer Arithmetic:
+       There are four arithmetic operators that can be used on pointers: ++, --, +, -</li>
+
+<li>	Pointers vs Arrays:
+  There is a close relationship between pointers and arrays.</li>
+
+<li>Array of Pointers:
+       You can define arrays to hold a number of pointers.</li>
+
+<li>	Pointer to Pointer:
+  C++ allows you to have pointer on a pointer and so on.</li>
+
+<li>Passing Pointers to Functions:
+Passing an argument by reference or by address both enable the passed argument to be changed in the calling function by the called function.</li>
+
+<li>	Return Pointer from Functions:
+C++ allows a function to return a pointer to local variable, static variable and dynamically allocated memory as well.</ul></li>
+    </article>
+    </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      All the documentation in this page is taken from<ul><li> <a href="https://www.tutorialspoint.com/cplusplus">Tutorialspoint</a></li><li>
+        <a href="www.diffen.com">diffen</a></li><li>
+        <a href="www.learncpp.com">learncpp</a></li><li>
+        <a href="http://www.lmpt.univ-tours.fr/~volkov/C++.pdf">C++ PDF</a></li></ul>
+    </article>
+    </section>
+</main>
